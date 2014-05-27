@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 
 from django.contrib import admin
-from ChatAdmin.views import add_question_by_db, list_question_by_db
+# from ChatAdmin.views import add_question_by_db, list_question_by_db
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -10,8 +10,10 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^question', add_question_by_db),
-    url(r'^list', list_question_by_db),
+    # url(r'^question', add_question_by_db),
+    # url(r'^list', list_question_by_db),
+    url(r'^home', 'ChatAdmin.views.home', name='home'),
+    url(r'^message', 'ChatAdmin.views.message', name='message'),
 
 
 

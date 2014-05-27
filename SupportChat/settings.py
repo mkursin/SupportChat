@@ -80,6 +80,8 @@ DATABASES = {
     }
 }
 
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
@@ -98,3 +100,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+PUSHER_APP_ID = '76012'
+PUSHER_KEY = 'd38cb75bae481304ff34'
+PUSHER_SECRET = '797bc8d8afb11ccd4d0f'
