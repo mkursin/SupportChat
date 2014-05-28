@@ -88,19 +88,6 @@ class RoomTest(TestCase):
         Room.objects.filter(user_key=1).delete()
 
 
-class FactoryTestsCase(TestCase):
-    def test_people_factory(self):
-        people = PeopleFactory()
-        self.assertTrue(isinstance(people, People))
-
-    def test_room_factory(self):
-        room = RoomFactory()
-        self.assertTrue(isinstance(room, Room))
-
-    def test_message_factory(self):
-        message = MessageFactory()
-        self.assertTrue(isinstance(message, Message))
-
 
 
 

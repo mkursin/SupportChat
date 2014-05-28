@@ -16,7 +16,7 @@
     <br>
     <input type="email" name="email" placeholder="Почта" size="28" required="*">
     <br>
-    <textarea name="text" placeholder="Вопрос" required=""></textarea>
+    <textarea name="message" placeholder="Вопрос" required=""></textarea>
     <br>
 
     <p>
@@ -27,20 +27,20 @@
 </form>
 
 <ul>
+    {% block content %}
+        {% for list_comment in list_comments %}
+            <li>
+            name: {{ list_comment.name }}
+            email: {{ list_comment.email }}
+            {#        comment: {{ list_comment.message }}#}
+            date comment: {{ list_comment.date }}
+        {% endfor %}
 
-    {% for list_comment in list_comments %}
-        <li>
-        name: {{ list_comment.name }}
-        email: {{ list_comment.email }}
-        comment: {{ list_comment.message }}
-        date comment: {{ list_comment.date }}
+    {% for list_message in list_messages %}
+        message:{{ list_message.message }}
     {% endfor %}
-{##}
-{#        {% for message_comment in message_comments %}#}
-{#            message:{{ message_comment.message }}#}
-{#        {% endfor %}#}
     </li>
-
+    {% endblock %}
 </ul>
 </body>
 <a id="Intercom" href="#">Support Payler</a>
